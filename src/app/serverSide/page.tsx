@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
 
 
@@ -35,6 +36,7 @@ const ServerSide = async () => {
                     <h1>{item.name}</h1>
                     <h2>{item.id}</h2>
                     <p>{item.status}</p>
+                    <Link className={"bg-black text-white"}href={`/personagem/${item.id}`}>Abrir detalhes</Link>
                 </div>
             ))}
         </>
